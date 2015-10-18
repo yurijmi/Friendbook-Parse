@@ -53,9 +53,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let friend = self.friends[indexPath.row]
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        return
+        self.performSegueWithIdentifier("friendSegue", sender: friend)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "friendSegue" {
+            let friendVC = segue.destinationViewController as! FriendViewController
+            
+            friendVC.friend = sender as? PFObject
+        }
     }
 
 }
