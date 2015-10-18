@@ -13,6 +13,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
 
+    var friends = [PFObject]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.dataSource = self
         
         createSampleFriend()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        updateFriends()
     }
     
     func createSampleFriend() {
@@ -35,13 +41,28 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func updateFriends() {
+        let query = PFQuery(className: "Friend")
+        
+        query.orderByDescending("createdAt")
+        
+        query.findObjectsInBackgroundWithBlock { (friends: [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                self.friends = friends!
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.friends.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let friend = self.friends[indexPath.row]
+        
         let cell = UITableViewCell()
-            cell.textLabel!.text = "Cell"
+            cell.textLabel!.text = friend["name"] as? String
         
         return cell
     }
