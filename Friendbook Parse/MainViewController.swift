@@ -20,25 +20,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.tableView.delegate   = self
         self.tableView.dataSource = self
-        
-        createSampleFriend()
     }
     
     override func viewDidAppear(animated: Bool) {
         updateFriends()
-    }
-    
-    func createSampleFriend() {
-        let sampleFriend = PFObject(className: "Friend")
-        
-        sampleFriend["name"]     = "John Doe"
-        sampleFriend["age"]      = 23
-        sampleFriend["birthday"] = "1th of April"
-        sampleFriend["phone"]    = "+7 (555) 555-55-55"
-        
-        sampleFriend.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Sample Friend was saved.")
-        }
     }
     
     func updateFriends() {
