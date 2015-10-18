@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04BBAB38899CB055E9CB647C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE470BFB0E412A86DF93FDD4 /* Pods.framework */; };
+		5038F2F01BD4455B0015CDD2 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5038F2EF1BD4455B0015CDD2 /* AddFriendViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		50B324121BD4283600160921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B324111BD4283600160921 /* AppDelegate.swift */; };
 		50B324141BD4283600160921 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B324131BD4283600160921 /* MainViewController.swift */; };
 		50B324171BD4283600160921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B324151BD4283600160921 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		1F37DB41D3A567677FE11D4A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5038F2EF1BD4455B0015CDD2 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		509EABDA1BD435F6001559DE /* libBolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBolts.a; path = "Pods/../build/Debug-iphoneos/libBolts.a"; sourceTree = "<group>"; };
 		50B3240E1BD4283600160921 /* Friendbook Parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friendbook Parse.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B324111BD4283600160921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				50B324111BD4283600160921 /* AppDelegate.swift */,
 				50B324131BD4283600160921 /* MainViewController.swift */,
 				50B7E6AC1BD43214006DF78F /* FriendViewController.swift */,
+				5038F2EF1BD4455B0015CDD2 /* AddFriendViewController.swift */,
 				50B324151BD4283600160921 /* Main.storyboard */,
 				50B324181BD4283600160921 /* Assets.xcassets */,
 				50B3241A1BD4283600160921 /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5038F2F01BD4455B0015CDD2 /* AddFriendViewController.swift in Sources */,
 				50B7E6AD1BD43214006DF78F /* FriendViewController.swift in Sources */,
 				50B324141BD4283600160921 /* MainViewController.swift in Sources */,
 				50B324121BD4283600160921 /* AppDelegate.swift in Sources */,

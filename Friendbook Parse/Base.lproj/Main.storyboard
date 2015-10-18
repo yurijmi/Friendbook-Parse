@@ -23,6 +23,137 @@
             </objects>
             <point key="canvasLocation" x="23" y="439"/>
         </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="HCX-2F-Ju3">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8PV-Sg-Qvc" customClass="AddFriendViewController" customModule="Friendbook_Parse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zwO-Lx-k8Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="xY5-Xa-EPM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0mr-am-wv7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6t5-4C-7i6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="qA9-iw-jvS"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Add Friend" id="mM5-YD-eEG">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="40m-nf-yug">
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="8PV-Sg-Qvc" id="naB-4p-SU0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wA3-Yh-hrv">
+                                            <connections>
+                                                <action selector="saveTapped:" destination="8PV-Sg-Qvc" id="DgB-T1-lad"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZbQ-IV-Vmf">
+                                <rect key="frame" x="20" y="79" width="134" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John Doe" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1M-2T-WbT">
+                                <rect key="frame" x="174" y="74" width="406" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes" keyboardType="alphabet"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's age:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DL8-jA-sNG">
+                                <rect key="frame" x="20" y="119" width="134" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="23" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8RO-P2-Uoa">
+                                <rect key="frame" x="174" y="114" width="406" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's birthday:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="78V-FM-NHB">
+                                <rect key="frame" x="20" y="159" width="134" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1st of April" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Wt-3t-FC1">
+                                <rect key="frame" x="174" y="154" width="406" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+7 (555) 555-55-55" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="459-EK-8qL">
+                                <rect key="frame" x="174" y="194" width="406" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-pF-aij">
+                                <rect key="frame" x="20" y="199" width="134" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="459-EK-8qL" firstAttribute="height" secondItem="x1M-2T-WbT" secondAttribute="height" id="2ss-oY-d5P"/>
+                            <constraint firstItem="x1M-2T-WbT" firstAttribute="top" secondItem="6t5-4C-7i6" secondAttribute="bottom" constant="10" id="5fL-El-pIG"/>
+                            <constraint firstItem="8RO-P2-Uoa" firstAttribute="leading" secondItem="DL8-jA-sNG" secondAttribute="trailing" constant="20" id="6bX-Xc-Gkq"/>
+                            <constraint firstItem="8Wt-3t-FC1" firstAttribute="height" secondItem="x1M-2T-WbT" secondAttribute="height" id="7p5-Jv-LGe"/>
+                            <constraint firstItem="ZbQ-IV-Vmf" firstAttribute="leading" secondItem="0mr-am-wv7" secondAttribute="leadingMargin" id="8Ue-Sm-Cnn"/>
+                            <constraint firstItem="8Wt-3t-FC1" firstAttribute="leading" secondItem="78V-FM-NHB" secondAttribute="trailing" constant="20" id="9ps-rB-7f2"/>
+                            <constraint firstItem="459-EK-8qL" firstAttribute="top" secondItem="8Wt-3t-FC1" secondAttribute="bottom" constant="10" id="B6c-gL-npp"/>
+                            <constraint firstAttribute="trailing" secondItem="6t5-4C-7i6" secondAttribute="trailing" id="D3w-GK-r7d"/>
+                            <constraint firstItem="DL8-jA-sNG" firstAttribute="centerY" secondItem="8RO-P2-Uoa" secondAttribute="centerY" id="G7h-e7-sa6"/>
+                            <constraint firstItem="459-EK-8qL" firstAttribute="leading" secondItem="pHx-pF-aij" secondAttribute="trailing" constant="20" id="GDQ-KK-QOQ"/>
+                            <constraint firstItem="x1M-2T-WbT" firstAttribute="trailing" secondItem="0mr-am-wv7" secondAttribute="trailingMargin" id="NCn-Wo-fdU"/>
+                            <constraint firstItem="pHx-pF-aij" firstAttribute="centerY" secondItem="459-EK-8qL" secondAttribute="centerY" id="OMK-NR-Kwr"/>
+                            <constraint firstItem="8RO-P2-Uoa" firstAttribute="width" secondItem="8Wt-3t-FC1" secondAttribute="width" id="Waf-mx-95d"/>
+                            <constraint firstItem="DL8-jA-sNG" firstAttribute="leading" secondItem="0mr-am-wv7" secondAttribute="leadingMargin" id="X4a-nW-GjY"/>
+                            <constraint firstItem="x1M-2T-WbT" firstAttribute="width" secondItem="8Wt-3t-FC1" secondAttribute="width" id="Y8H-vs-Kjo"/>
+                            <constraint firstItem="8RO-P2-Uoa" firstAttribute="height" secondItem="x1M-2T-WbT" secondAttribute="height" id="Zha-ze-F9D"/>
+                            <constraint firstItem="6t5-4C-7i6" firstAttribute="leading" secondItem="0mr-am-wv7" secondAttribute="leading" id="aVv-vV-gUM"/>
+                            <constraint firstItem="pHx-pF-aij" firstAttribute="leading" secondItem="0mr-am-wv7" secondAttribute="leadingMargin" id="cOm-ON-H8H"/>
+                            <constraint firstItem="459-EK-8qL" firstAttribute="width" secondItem="8Wt-3t-FC1" secondAttribute="width" id="ffG-xN-Tz3"/>
+                            <constraint firstItem="8Wt-3t-FC1" firstAttribute="top" secondItem="8RO-P2-Uoa" secondAttribute="bottom" constant="10" id="gQB-2U-7i7"/>
+                            <constraint firstItem="8Wt-3t-FC1" firstAttribute="trailing" secondItem="0mr-am-wv7" secondAttribute="trailingMargin" id="gde-p9-Ybm"/>
+                            <constraint firstItem="459-EK-8qL" firstAttribute="trailing" secondItem="0mr-am-wv7" secondAttribute="trailingMargin" id="jiY-pU-fdn"/>
+                            <constraint firstItem="78V-FM-NHB" firstAttribute="leading" secondItem="0mr-am-wv7" secondAttribute="leadingMargin" id="kvE-8K-Q4f"/>
+                            <constraint firstItem="x1M-2T-WbT" firstAttribute="leading" secondItem="ZbQ-IV-Vmf" secondAttribute="trailing" constant="20" id="lWe-Hp-KkN"/>
+                            <constraint firstItem="6t5-4C-7i6" firstAttribute="top" secondItem="0mr-am-wv7" secondAttribute="top" id="oPC-Hi-2os"/>
+                            <constraint firstItem="ZbQ-IV-Vmf" firstAttribute="centerY" secondItem="x1M-2T-WbT" secondAttribute="centerY" id="sAx-4M-JXb"/>
+                            <constraint firstItem="8RO-P2-Uoa" firstAttribute="trailing" secondItem="0mr-am-wv7" secondAttribute="trailingMargin" id="tMf-5M-qEr"/>
+                            <constraint firstItem="8RO-P2-Uoa" firstAttribute="top" secondItem="x1M-2T-WbT" secondAttribute="bottom" constant="10" id="zM4-T6-IHt"/>
+                            <constraint firstItem="78V-FM-NHB" firstAttribute="centerY" secondItem="8Wt-3t-FC1" secondAttribute="centerY" id="zzE-Df-vyd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageField" destination="8RO-P2-Uoa" id="8HF-AU-i7v"/>
+                        <outlet property="birthdayField" destination="8Wt-3t-FC1" id="YjQ-y1-9Pp"/>
+                        <outlet property="nameField" destination="x1M-2T-WbT" id="UzA-Bw-h03"/>
+                        <outlet property="phoneField" destination="459-EK-8qL" id="teB-Ah-w7W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CaC-eb-E3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-260"/>
+        </scene>
         <!--Friendbook-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -50,7 +181,13 @@
                             <constraint firstAttribute="trailing" secondItem="lxo-q8-C3i" secondAttribute="trailing" id="ulz-EW-DCg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Friendbook" id="6Fu-kw-cUp"/>
+                    <navigationItem key="navigationItem" title="Friendbook" id="6Fu-kw-cUp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wZw-fK-1ra">
+                            <connections>
+                                <segue destination="8PV-Sg-Qvc" kind="presentation" id="Jjo-js-atC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="lxo-q8-C3i" id="XKr-N2-Rqg"/>
                         <segue destination="c72-Gr-ITB" kind="show" identifier="friendSegue" id="5Wj-Q4-HDv"/>
