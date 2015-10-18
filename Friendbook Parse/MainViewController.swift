@@ -60,6 +60,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegueWithIdentifier("friendSegue", sender: friend)
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            self.friends[indexPath.row].deleteInBackground()
+            self.friends.removeAtIndex(indexPath.row)
+            
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "friendSegue" {
             let friendVC = segue.destinationViewController as! FriendViewController
