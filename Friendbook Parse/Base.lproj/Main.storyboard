@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -70,10 +71,60 @@
                     <view key="view" contentMode="scaleToFill" id="xkI-o0-lRh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mnE-J3-mOp">
+                                <rect key="frame" x="20" y="74" width="560" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aNH-Iz-GNR">
+                                <rect key="frame" x="20" y="115" width="560" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cj8-sC-xwO">
+                                <rect key="frame" x="20" y="146" width="560" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bh2-YA-4AH">
+                                <rect key="frame" x="20" y="175" width="560" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cj8-sC-xwO" firstAttribute="top" secondItem="aNH-Iz-GNR" secondAttribute="bottom" constant="10" id="3hA-no-Bb9"/>
+                            <constraint firstItem="aNH-Iz-GNR" firstAttribute="leading" secondItem="xkI-o0-lRh" secondAttribute="leadingMargin" id="9SE-MW-v6J"/>
+                            <constraint firstItem="bh2-YA-4AH" firstAttribute="leading" secondItem="xkI-o0-lRh" secondAttribute="leadingMargin" id="EFu-OR-dPX"/>
+                            <constraint firstItem="aNH-Iz-GNR" firstAttribute="top" secondItem="mnE-J3-mOp" secondAttribute="bottom" constant="5" id="H92-zA-6X9"/>
+                            <constraint firstItem="bh2-YA-4AH" firstAttribute="top" secondItem="cj8-sC-xwO" secondAttribute="bottom" constant="5" id="Nqt-RX-4h8"/>
+                            <constraint firstItem="mnE-J3-mOp" firstAttribute="leading" secondItem="xkI-o0-lRh" secondAttribute="leadingMargin" id="aOD-st-6Kt"/>
+                            <constraint firstItem="cj8-sC-xwO" firstAttribute="leading" secondItem="xkI-o0-lRh" secondAttribute="leadingMargin" id="awX-fD-ILO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aNH-Iz-GNR" secondAttribute="trailing" id="glB-M7-N9J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bh2-YA-4AH" secondAttribute="trailing" id="jBR-xq-f6u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mnE-J3-mOp" secondAttribute="trailing" id="ofv-gO-EoD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cj8-sC-xwO" secondAttribute="trailing" id="wfC-Fv-ifT"/>
+                            <constraint firstItem="mnE-J3-mOp" firstAttribute="top" secondItem="3Ct-1M-Z0T" secondAttribute="bottom" constant="10" id="zao-N0-41J"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friend" id="cEW-hg-PAD"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="aNH-Iz-GNR" id="QbC-yE-ho1"/>
+                        <outlet property="birthdayLabel" destination="cj8-sC-xwO" id="mam-Wd-RrN"/>
+                        <outlet property="nameLabel" destination="mnE-J3-mOp" id="eSX-Sm-FzF"/>
+                        <outlet property="phoneLabel" destination="bh2-YA-4AH" id="Sth-4o-bRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMA-iP-ZGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

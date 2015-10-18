@@ -9,7 +9,12 @@
 import UIKit
 
 class FriendViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel     : UILabel!
+    @IBOutlet weak var ageLabel      : UILabel!
+    @IBOutlet weak var birthdayLabel : UILabel!
+    @IBOutlet weak var phoneLabel    : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
