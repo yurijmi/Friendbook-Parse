@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class AddFriendViewController: UIViewController {
     
@@ -15,18 +16,23 @@ class AddFriendViewController: UIViewController {
     @IBOutlet weak var birthdayField : UITextField!
     @IBOutlet weak var phoneField    : UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-    
     @IBAction func cancelTapped(button: UIBarButtonItem) {
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func saveTapped(button: UIBarButtonItem) {
+        let newFriend = PFObject(className: "Friend")
         
+        newFriend.setObject(self.nameField.text!, forKey: "name")
+        newFriend.setObject(Int(self.ageField.text!)!, forKey: "age")
+        newFriend.setObject(self.birthdayField.text!, forKey: "birthday")
+        newFriend.setObject(self.phoneField.text!, forKey: "phone")
+        
+        newFriend.saveInBackgroundWithBlock { (saved: Bool, error: NSError?) -> Void in
+            if saved {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
     }
     
 }
